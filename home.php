@@ -95,166 +95,166 @@ if ($result = mysqli_query($db , $query1)) {
         
     </head>
 
-<body>
-   
-    <div class="toast" data-autohide="false">
+  <body>
+    
+      <div class="toast" data-autohide="false">
 
-      <div class="toast-header">
-        <strong class="mr-auto text-primary">
-          <!-- notification message -->
+        <div class="toast-header">
+          <strong class="mr-auto text-primary">
+            <!-- notification message -->
 
-          <?php if (isset($_SESSION['success'])) : ?>
-            <div class="error success">
-              <h3  style="font-size: 1rem;">
-                <?php 
-                  echo $_SESSION['success']; 
-                  unset($_SESSION['success']);
-                ?>
-              </h3>
-            </div>
+            <?php if (isset($_SESSION['success'])) : ?>
+              <div class="error success">
+                <h3  style="font-size: 1rem;">
+                  <?php 
+                    echo $_SESSION['success']; 
+                    unset($_SESSION['success']);
+                  ?>
+                </h3>
+              </div>
+            <?php endif ?>
+
+          </strong>
+          
+          <small class="text-muted">5 mins ago</small>
+          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+        </div>
+
+        <div class="toast-body">
+          <!-- logged in user information -->
+          <?php  if (isset($_SESSION['username'])) : ?>
+            <h6>Welcome <strong><?php echo $_SESSION['username']; ?></strong><br>
+              <a href="register.php?logout='1'" style="color: red;">Logout</a> </h6>
           <?php endif ?>
 
-        </strong>
-        
-        <small class="text-muted">5 mins ago</small>
-        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
-      </div>
-
-      <div class="toast-body">
-        <!-- logged in user information -->
-        <?php  if (isset($_SESSION['username'])) : ?>
-          <h6>Welcome <strong><?php echo $_SESSION['username']; ?></strong><br>
-            <a href="register.php?logout='1'" style="color: red;">Logout</a> </h6>
-        <?php endif ?>
-
-      </div>
-  </div>
-  
-  
-    <div class="leftcol">
-      <br>
-      <?php echo '<img src="images/'.$photo.'" width="90%" height="50%">'; ?>
-      <?php echo '<h2 class="p-3">'.$first_name.' '.$last_name.'<br />'; ?>
-      <small style="font-size: 18px; color: #1B13C1;"> <?php echo $job ; ?> </small></h2>
-      <p>
-        <?php echo '<a href="mailto:'.$email.'" class="fa fa-envelope p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
-        <?php echo '<a href="https://github.com/'.$social_account_1.'" class="fa fa-github p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>';?>
-        <?php echo '<a href="https://www.instagram.com/'.$social_account_2.'" class="fa fa-instagram p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
-        <?php echo '<a href="https://twitter.com/'.$social_account_4.'" class="fa fa-twitter p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
-        <?php echo '<a href="https://www.linkedin.com/in/'.$social_account_3.'" class="fa fa-linkedin p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
-      </p>
-      <br>
-      <hr>
-      <div class="row">
-          <?php echo '<a href="'.$resume.'" style="text-decoration: none; color: #000;" class="pl-5 ml-4" download>DOWNLOAD CV</a>'; ?>
-          <div class="vl3">
-            <?php echo '<a href="tel:'.$code.$phone.'" style="text-decoration: none; color: #000;" class="pl-5 ml-3">CONTACT ME</a>'; ?>
-          </div> 
-      </div>
-      
+        </div>
     </div>
-    <br>
-    <div class="content second-content">
+    
+    
+      <div class="leftcol">
+        <br>
+        <?php echo '<img src="images/'.$photo.'" width="90%" height="50%">'; ?>
+        <?php echo '<h2 class="p-3">'.$first_name.' '.$last_name.'<br />'; ?>
+        <small style="font-size: 18px; color: #1B13C1;"> <?php echo $job ; ?> </small></h2>
+        <p>
+          <?php echo '<a href="mailto:'.$email.'" class="fa fa-envelope p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
+          <?php echo '<a href="https://github.com/'.$social_account_1.'" class="fa fa-github p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>';?>
+          <?php echo '<a href="https://www.instagram.com/'.$social_account_2.'" class="fa fa-instagram p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
+          <?php echo '<a href="https://twitter.com/'.$social_account_4.'" class="fa fa-twitter p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
+          <?php echo '<a href="https://www.linkedin.com/in/'.$social_account_3.'" class="fa fa-linkedin p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
+        </p>
+        <br>
+        <hr>
+        <div class="row">
+            <?php echo '<a href="'.$resume.'" style="text-decoration: none; color: #000;" class="pl-5 ml-4" download>DOWNLOAD CV</a>'; ?>
+            <div class="vl3">
+              <?php echo '<a href="tel:'.$code.$phone.'" style="text-decoration: none; color: #000;" class="pl-5 ml-3">CONTACT ME</a>'; ?>
+            </div> 
+        </div>
+        
+      </div>
+      <br>
+      <div class="content second-content">
 
-          <div class="container">
-                
-            <p style="font-size: 30px; font-weight: bold; margin: 35px; margin-left: 8%;">About Me</p>
-            <hr>
-            
-            <div class="row">
-
-              <div class="col-3 col-sm-3 col-md-5 ml-5 mr-5 mt-2 p-5">
+            <div class="container">
                   
-                  <?php echo '<p style="width: 300px;">'.$about.'</p>'; ?>
-                  
-              </div>
+              <p style="font-size: 30px; font-weight: bold; margin: 35px; margin-left: 8%;">About Me</p>
+              <hr>
               
-              <div class="col-12 col-sm-12 col-md-5"> 
-                 
-                      
-                      <h6 class="right"><b style="background-color: #1B13C1; padding: 4px 8px; border-radius: 10%"> Age : </b>
-                          <?php echo '<p style="float: right;">'.$age.'</p>'; ?>
-                      </h6>
+              <div class="row">
 
-                      <hr>
-                      <h6 class="right"><b style="background-color: #1B13C1; padding: 4px 8px; border-radius: 10%"> Country : </b>
-                          <?php echo '<p style="float: right;">'.$country.'</p>'; ?>
-                      </h6>
-
-                      <hr>
-
-                      <h6 class="right"><b style="background-color: #1B13C1; padding: 4px 8px; border-radius: 10%"> Address : </b>
-                          <?php echo '<p style="float: right;">'.$district.' , '.$country.'</p>'; ?>
-                      </h6>
-                  
-              </div>
-                      
-            </div>
-
-            <hr>
-            <br>
+                <div class="col-3 col-sm-3 col-md-5 ml-5 mr-5 mt-2 p-5">
                     
-            <p style="font-size: 30px; font-weight: bold; margin: 35px; margin-left: 8%;"> Experience </p>
-            <hr>
-            
-            <div class="row">
-
-              <div class="col-8 col-sm-4 col-md-4 ml-5 mr-5 pl-5">
-                  <br>
-                  <p class="p-2" style="border: 1px solid #1B13C1; color: #1B13C1; text-align: center;"> <b>Present</b> </p>
-                  <h5><?php echo $job ; ?></h5>
-                  <h6> <?php echo ' ---- '.$company ; ?> </h6>
-                  <br>
-                  <p style="width : 500px;" class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <?php echo '<p style="width: 300px;">'.$about.'</p>'; ?>
+                    
+                </div>
+                
+                <div class="col-12 col-sm-12 col-md-5"> 
+                  
                         
-              </div>
-                     
-            </div>
-            <hr>
-            <br>
+                        <h6 class="right"><b style="background-color: #1B13C1; padding: 4px 8px; border-radius: 10%"> Age : </b>
+                            <?php echo '<p style="float: right;">'.$age.'</p>'; ?>
+                        </h6>
 
-            <p style="font-size: 30px; font-weight: bold; margin: 35px; margin-left: 8%;">My Services</p>
-            <hr>
-            
-            <div class="row">
+                        <hr>
+                        <h6 class="right"><b style="background-color: #1B13C1; padding: 4px 8px; border-radius: 10%"> Country : </b>
+                            <?php echo '<p style="float: right;">'.$country.'</p>'; ?>
+                        </h6>
 
-              <div class="col-12 col-sm-12 col-md-4 ml-5 mr-5 pr-5">
-                  <br>
-                  <h5 style="width: 250px; text-align: center;"> <?php echo $service1 ; ?> </h5>
-                  <br>
-                  <p style="width: 250px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <hr>
+
+                        <h6 class="right"><b style="background-color: #1B13C1; padding: 4px 8px; border-radius: 10%"> Address : </b>
+                            <?php echo '<p style="float: right;">'.$district.' , '.$country.'</p>'; ?>
+                        </h6>
+                    
+                </div>
                         
               </div>
 
-              <div class="col-12 col-sm-12 col-md-5"> 
-                  
-                      <h5 class="mx-5 my-3" style="width: 250px; text-align: center;"> <?php echo $service2 ; ?> </h5>
-                      <br>
-                      <p class="ml-5" style="width: 250px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  
-              </div>
+              <hr>
+              <br>
                       
-            </div>
-            <hr>
+              <p style="font-size: 30px; font-weight: bold; margin: 35px; margin-left: 8%;"> Experience </p>
+              <hr>
+              
+              <div class="row">
+
+                <div class="col-8 col-sm-4 col-md-4 ml-5 mr-5 pl-5">
+                    <br>
+                    <p class="p-2" style="border: 1px solid #1B13C1; color: #1B13C1; text-align: center;"> <b>Present</b> </p>
+                    <h5><?php echo $job ; ?></h5>
+                    <h6> <?php echo ' ---- '.$company ; ?> </h6>
+                    <br>
+                    <p style="width : 500px;" class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                          
+                </div>
+                      
+              </div>
+              <hr>
               <br>
 
-          </div>        
-  </div>
+              <p style="font-size: 30px; font-weight: bold; margin: 35px; margin-left: 8%;">My Services</p>
+              <hr>
+              
+              <div class="row">
 
-        
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-    
-    <script>
-      $(document).ready(function(){
-        $('.toast').toast('show');
-      });
-    </script>
+                <div class="col-12 col-sm-12 col-md-4 ml-5 mr-5 pr-5">
+                    <br>
+                    <h5 style="width: 250px; text-align: center;"> <?php echo $service1 ; ?> </h5>
+                    <br>
+                    <p style="width: 250px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                          
+                </div>
 
-    
-</body>
+                <div class="col-12 col-sm-12 col-md-5"> 
+                    
+                        <h5 class="mx-5 my-3" style="width: 250px; text-align: center;"> <?php echo $service2 ; ?> </h5>
+                        <br>
+                        <p class="ml-5" style="width: 250px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    
+                </div>
+                        
+              </div>
+              <hr>
+                <br>
+
+            </div>        
+    </div>
+
+          
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+      
+      <script>
+        $(document).ready(function(){
+          $('.toast').toast('show');
+        });
+      </script>
+
+      
+  </body>
 </html>
