@@ -1,0 +1,199 @@
+
+
+            body {
+              background-color: #120FA6;
+              z-index: 0;
+              
+            }
+            .content {
+              overflow-y: scroll;
+              height: 500px;
+              width: 55%;
+              bottom: 10%;
+              z-index: 0;
+              background: rgba(255, 255, 255);
+              float: right;
+              margin-right: 80px;
+              margin-top: 3%;
+            }
+
+            .leftcol{
+                margin-left: 100px;
+                top: 40px;
+                width: 35vw;
+                height: 86vh;
+                z-index: 200;
+                text-align: center;
+                visibility: visible;
+                border-radius: 5px;
+                background-color: white;
+                position: fixed;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            .toast{
+                position: fixed;
+                right: 0;
+                width: 300px;
+                margin-top: 1%;
+                z-index: 200;
+            }
+            .vl3{
+              border-left: 1px solid lightgrey;
+              height: 35px;
+              position: absolute;
+              left: 50%;
+              margin-left: -3px;
+            }
+            
+            .right{
+               margin: 10%;
+               width: 270px;
+               
+            }
+            .col-md-5{
+              border-left: 1px solid lightgrey;
+            }
+
+            @media (max-width: 1000px) {
+
+            body {
+              background-color: #120FA6;
+              z-index: 0;
+              
+            }
+            .content {
+              overflow-y: scroll;
+              height: 500px;
+              width: 55%;
+              bottom: 10%;
+              z-index: 0;
+              background: rgba(255, 255, 255);
+              float: right;
+              margin-right: 80px;
+              margin-top: 3%;
+            }
+
+            .leftcol{
+                margin-left: 100px;
+                top: 40px;
+                width: 35vw;
+                height: 86vh;
+                z-index: 200;
+                text-align: center;
+                visibility: visible;
+                border-radius: 5px;
+                background-color: white;
+                position: fixed;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            .toast{
+                position: fixed;
+                right: 0;
+                width: 300px;
+                margin-top: 1%;
+                z-index: 200;
+            }
+            .col-md-5{
+                border-left: 1px solid lightgrey;
+            }
+
+            .vl3{
+              border-left: 1px solid lightgrey;
+              height: 35px;
+              position: absolute;
+              left: 50%;
+              margin-left: -3px;
+            }
+          }
+
+
+            @media (max-width: 749px) {
+            
+              body{
+                background-color: unset;
+              }
+            .leftcol{
+              margin-left: 0px;
+              width:auto;
+              height: 70vh;
+              border-radius: 0px;
+              top: 0;
+              position: inherit;
+              box-shadow:none;
+              
+            }
+            .content {
+              width: 100vw;
+              height: auto;
+              overflow-y: visible; 
+              margin-right: 0;
+              margin-top: -7%;
+            }
+          
+            .toast{
+                margin-top: 18%;
+             }
+
+             .p{
+              display: none;
+             }
+          
+            .vl3{
+              border-left: 1px solid lightgrey;
+              height: 35px;
+              position: absolute;
+              left: 50%;
+              margin-left: -3px;
+            }
+
+            .col-md-5{
+                border-left: none;
+            }
+
+            }
+
+             @media (max-width: 450px) {
+              
+              body{
+                background-color: unset;
+              }
+            .leftcol{
+              margin-left: 0px;
+              width:auto;
+              height: 70vh;
+              border-radius: 0px;
+              top: 0;
+              position: inherit;
+              box-shadow:none;
+              
+            }
+            .content {
+              width: 100vw;
+              height: auto;
+              overflow-y: visible; 
+              margin-right: 0;
+              margin-top: -7%;
+            }
+          
+            .toast{
+                margin-top: 18%;
+             }
+
+             .p{
+              display: none;
+             }
+             
+            .vl3{
+              border-left: 1px solid lightgrey;
+              height: 35px;
+              position: absolute;
+              left: 50%;
+              margin-left: -3px;
+            }
+            .col-md-5{
+                border-left: none;
+            }
+
+            }
